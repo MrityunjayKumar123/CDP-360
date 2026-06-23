@@ -72,22 +72,15 @@ python ingestion/kafka_producer.py
 
 ##** Step 5 – Run Spark Streaming Job**
 
-spark-submit processing/spark_streaming_job.py
+python processing/spark_streaming_job.py
 
-## **Step 6 – Identity Resolution**
 
-python identity_resolution/dedupe_job.py
-
-## **Step 7 – Feature Engineering**
+## **Step 6 – Feature Engineering**
 
 python features/feature_engineering.py
 
 
-## **Step 8 – Governance Checks**
-
-python governance/great_expectations_checks.py
-
-## Step 9 – Verify PostgreSQL Data
+## Step 7 – Verify PostgreSQL Data
 
 psql -h localhost -U postgres -d cdp
 SELECT * FROM loan_transactions;
