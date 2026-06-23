@@ -18,3 +18,4 @@ for event in sample_events:
     time.sleep(1)
 
 producer.flush()
+
